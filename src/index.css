@@ -1,0 +1,127 @@
+:root {
+  --clr-primary: #11998e;
+  --clr-secondary: #38ef7d;
+  --clr-white: #fff;
+  --clr-gray: #9b9b9b;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: white;
+  color: var(--clr-gray);
+  line-height: 1.5;
+}
+
+section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.search {
+  padding: 5em 0;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-form {
+  display: flex;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.form-input,
+.submit-btn {
+  border: 0;
+  border-bottom: 2px solid var(--clr-gray);
+  outline: 0;
+  font-size: 1.5rem;
+  color: var(--clr-gray);
+  padding: 0.5em 0;
+  background: transparent;
+}
+
+.photos {
+  padding: 5em 0;
+}
+
+.photos-center {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+}
+
+.photo {
+  height: 20em;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.photo h4 {
+  margin-bottom: 0.5rem;
+}
+.photo p {
+  margin-bottom: 0;
+}
+
+.user-img {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+}
+
+.photo-info {
+  position: absolute;
+  width: 100%;
+  padding: 1em;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  transform: translateY(100%);
+  transition: all 0.3s linear;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.photo:hover .photo-info {
+  transform: translateY(0);
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+}
+
+@media (max-width: 1000px) {
+  .photos-center {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .photos-center {
+    grid-template-columns: auto;
+  }
+}
